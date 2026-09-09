@@ -5,6 +5,7 @@ import { PokemonSkeleton } from '@/features/pokemon/components/PokemonSkeleton'
 import { PokedexPage } from '@/features/pokemon/pages/PokedexPage'
 import { BattlePage } from '@/features/battle/pages/BattlePage'
 import { CapturedPage } from '@/features/captured/pages/CapturedPage'
+import { AboutPage } from '@/features/about/pages/AboutPage'
 import { ComparePage } from '@/features/compare/pages/ComparePage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
       {
         path: 'battle',
         element: <BattlePage />,
+      },
+      {
+        path: 'about',
+        element: <AboutPage />,
       },
       {
         path: 'pokemon/:id',
