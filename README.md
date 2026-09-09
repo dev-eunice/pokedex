@@ -1,6 +1,6 @@
 # Gen 1 Pokédex
 
-A production-quality frontend assessment project for exploring, searching, and tracking captured Gen 1 Pokémon (#001–#151).
+A frontend assessment project for exploring, searching, and tracking captured Gen 1 Pokémon (#001–#151).
 
 ## Features
 
@@ -138,8 +138,4 @@ Direct routes like `/pokemon/25` and `/captured` work after refresh.
 ## Deployment URL
 
 - **GitHub Repository:** [https://github.com/dev-eunice/pokedex](https://github.com/dev-eunice/pokedex)
-- _Add your Netlify deployment URL here after publishing._
-
-## License
-
-MIT
+- https://app.netlify.com/projects/eu-pokedex-sandbox/overview
