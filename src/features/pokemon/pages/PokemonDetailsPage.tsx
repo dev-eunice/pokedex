@@ -1,5 +1,5 @@
 import { ArrowLeft, CheckCircle2, Sparkles } from 'lucide-react'
-import { useState, type ReactNode } from 'react'
+import { useMemo, useState, type ReactNode } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { ErrorState } from '@/components/ErrorState'
 import { CaptureDialog } from '@/features/pokemon/components/CaptureDialog'
@@ -11,6 +11,13 @@ import {
 } from '@/features/pokemon/components/PokemonArtViewer'
 import { PokemonStats } from '@/features/pokemon/components/PokemonStats'
 import { PokemonTypeIcon } from '@/features/pokemon/components/PokemonTypeIcon'
+import { PokemonMatchupsPanel } from '@/features/compare/components/PokemonMatchupsPanel'
+import {
+  buildCompareProfileFromDetails,
+  buildCompareProfileFromSummary,
+} from '@/features/compare/utils/buildCompareProfile'
+import { getPokemonMatchups } from '@/features/compare/utils/matchupAnalysis'
+import { useAllGen1Pokemon } from '@/features/pokemon/hooks/usePokemonList'
 import { usePokemon } from '@/features/pokemon/hooks/usePokemon'
 import { getPokemonCardMeta } from '@/features/pokemon/utils/cardMeta'
 import { getTcgTheme } from '@/features/pokemon/utils/tcgTheme'
@@ -82,6 +89,7 @@ export function PokemonDetailsPage() {
   const isValidId = isValidGen1Id(id)
 
   const { data, isLoading, error, refetch } = usePokemon(id)
+  const allGen1Query = useAllGen1Pokemon()
   const isCaptured = useIsCaptured(id)
   const capturedMap = useCapturedPokemonMap()
   const capturedEntry = capturedMap[id]
@@ -92,6 +100,16 @@ export function PokemonDetailsPage() {
   const [uncaptureOpen, setUncaptureOpen] = useState(false)
   const [artViewMode, setArtViewMode] = useState<ArtViewMode>('2d')
   const [autoRotate, setAutoRotate] = useState(false)
+
+  const matchupLists = useMemo(() => {
+    if (!data) {
+      return { favorable: [], unfavorable: [] }
+    }
+
+    const currentProfile = buildCompareProfileFromDetails(data)
+    const opponents = (allGen1Query.data ?? []).map(buildCompareProfileFromSummary)
+    return getPokemonMatchups(currentProfile, opponents, 6)
+  }, [allGen1Query.data, data])
 
   if (!isValidId) {
     return (
@@ -375,6 +393,12 @@ export function PokemonDetailsPage() {
               </div>
             </div>
           </TcgPanel>
+
+          <PokemonMatchupsPanel
+            pokemonId={data.id}
+            matchups={matchupLists}
+            theme={theme}
+          />
         </div>
       </div>
 
