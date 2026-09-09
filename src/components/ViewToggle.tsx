@@ -6,12 +6,13 @@ import { cn } from '@/lib/utils/cn'
 interface ViewToggleProps {
   value: ViewMode
   onChange: (mode: ViewMode) => void
+  className?: string
 }
 
-export function ViewToggle({ value, onChange }: ViewToggleProps) {
+export function ViewToggle({ value, onChange, className }: ViewToggleProps) {
   return (
     <div
-      className="inline-flex rounded-lg border border-border bg-card p-1"
+      className={cn('inline-flex shrink-0 rounded-lg border border-border bg-card p-1', className)}
       role="group"
       aria-label="View mode"
     >

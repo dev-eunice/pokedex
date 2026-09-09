@@ -10,6 +10,9 @@ export const SPRITE_BASE =
 
 export const OFFICIAL_ARTWORK_BASE = `${SPRITE_BASE}/other/official-artwork`
 
+export const POKEMON_3D_MODEL_BASE =
+  'https://raw.githubusercontent.com/Pokemon-3D-api/assets/main/models/opt/regular'
+
 export const NICKNAME_MAX_LENGTH = 20
 
 export const STORAGE_KEYS = {

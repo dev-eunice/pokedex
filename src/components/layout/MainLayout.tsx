@@ -5,7 +5,7 @@ export function MainLayout() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-8 sm:px-6 lg:px-8">
+      <main className="mx-auto w-full max-w-7xl flex-1 px-3 py-6 sm:px-6 sm:py-8 lg:px-8">
         <Outlet />
       </main>
       <footer className="border-t border-border/80 py-6 text-center text-xs text-muted-foreground">

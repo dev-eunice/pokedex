@@ -28,13 +28,13 @@ export function PokemonSkeleton({ viewMode, count = 8 }: PokemonSkeletonProps) {
 
   return (
     <div
-      className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+      className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
       aria-hidden
     >
       {Array.from({ length: count }).map((_, index) => (
         <div
           key={index}
-          className="aspect-[5/7] w-full max-w-[240px] justify-self-center rounded-[14px] border-[3px] border-yellow-300/50 p-2"
+          className="aspect-[5/7] w-full max-w-[280px] justify-self-center rounded-[14px] border-[3px] border-yellow-300/50 p-2 sm:max-w-[240px]"
         >
           <Skeleton className="mb-2 h-8 w-full rounded-md" />
           <Skeleton className="mb-2 aspect-[4/3] w-full rounded-md" />

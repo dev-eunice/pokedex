@@ -1,4 +1,10 @@
-import { GEN1_END, GEN1_START, OFFICIAL_ARTWORK_BASE, SPRITE_BASE } from '@/lib/constants'
+import {
+  GEN1_END,
+  GEN1_START,
+  OFFICIAL_ARTWORK_BASE,
+  POKEMON_3D_MODEL_BASE,
+  SPRITE_BASE,
+} from '@/lib/constants'
 
 export function extractPokemonIdFromUrl(url: string): number {
   const match = url.match(/\/pokemon\/(\d+)\/?$/)
@@ -19,6 +25,10 @@ export function getPokemonPixelSpriteUrl(id: number): string {
 /** High-resolution official artwork, with pixel sprite available as fallback. */
 export function getPokemonSpriteUrl(id: number): string {
   return getPokemonArtworkUrl(id)
+}
+
+export function getPokemon3DModelUrl(id: number): string {
+  return `${POKEMON_3D_MODEL_BASE}/${id}.glb`
 }
 
 export function isValidGen1Id(id: number): boolean {

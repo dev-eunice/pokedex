@@ -17,7 +17,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/80 bg-background/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-3 sm:gap-4 sm:px-6 lg:px-8">
         <NavLink
           to="/"
           className="group flex items-center gap-3"
@@ -26,9 +26,12 @@ export function Header() {
           <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm transition-transform group-hover:scale-105">
             <span className="font-display text-sm font-bold">G1</span>
           </span>
-          <div className="hidden sm:block">
-            <p className="font-display text-lg font-bold leading-none">Gen 1 Pokédex</p>
-            <p className="text-xs text-muted-foreground">Kanto Region</p>
+          <div>
+            <p className="font-display text-base font-bold leading-none sm:text-lg">
+              <span className="sm:hidden">Pokédex</span>
+              <span className="hidden sm:inline">Gen 1 Pokédex</span>
+            </p>
+            <p className="hidden text-xs text-muted-foreground sm:block">Kanto Region</p>
           </div>
         </NavLink>
 

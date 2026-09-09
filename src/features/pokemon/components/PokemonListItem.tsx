@@ -33,7 +33,7 @@ export function PokemonListItem({ pokemon }: PokemonListItemProps) {
       }}
     >
       <div
-        className="flex w-24 shrink-0 flex-col border-r-2 p-2"
+        className="flex w-20 shrink-0 flex-col border-r-2 p-2 sm:w-24"
         style={{ borderColor: theme.frame, backgroundColor: 'rgba(255,255,255,0.25)' }}
       >
         <div className="mb-1 aspect-square overflow-hidden rounded-md bg-white/80 p-1">
@@ -42,7 +42,7 @@ export function PokemonListItem({ pokemon }: PokemonListItemProps) {
         <p className="text-center text-[8px] font-bold uppercase">{formatPokedexNumber(pokemon.id)}</p>
       </div>
 
-      <div className="flex min-w-0 flex-1 items-center justify-between gap-3 p-3">
+      <div className="flex min-w-0 flex-1 items-center justify-between gap-2 p-2.5 sm:gap-3 sm:p-3">
         <div className="min-w-0">
           <div className="mb-1 flex items-center gap-2">
             <span
