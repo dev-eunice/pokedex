@@ -1,5 +1,6 @@
 import { RefreshCw, Shuffle, Swords, Zap } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { ErrorState } from '@/components/ErrorState'
 import { BattleFighterPanel } from '@/features/battle/components/BattleFighterPanel'
 import { BattleLog } from '@/features/battle/components/BattleLog'
@@ -19,9 +20,20 @@ const QUICK_MATCHUPS = [
   { label: 'Mewtwo vs Alakazam', shortLabel: 'Mewtwo · Alakazam', fighter1Id: 150, fighter2Id: 65 },
 ] as const
 
+function parseFighterId(value: string | null): number | null {
+  if (!value) return null
+  const id = Number.parseInt(value, 10)
+  return Number.isFinite(id) && id > 0 ? id : null
+}
+
 export function BattlePage() {
-  const [fighter1Id, setFighter1Id] = useState<number | null>(6)
-  const [fighter2Id, setFighter2Id] = useState<number | null>(9)
+  const [searchParams] = useSearchParams()
+  const [fighter1Id, setFighter1Id] = useState<number | null>(
+    () => parseFighterId(searchParams.get('fighter1')) ?? 6,
+  )
+  const [fighter2Id, setFighter2Id] = useState<number | null>(
+    () => parseFighterId(searchParams.get('fighter2')) ?? 9,
+  )
   const [battleResult, setBattleResult] = useState<BattleResult | null>(null)
   const [activeTurn, setActiveTurn] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)

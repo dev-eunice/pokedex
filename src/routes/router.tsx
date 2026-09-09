@@ -5,6 +5,7 @@ import { PokemonSkeleton } from '@/features/pokemon/components/PokemonSkeleton'
 import { PokedexPage } from '@/features/pokemon/pages/PokedexPage'
 import { BattlePage } from '@/features/battle/pages/BattlePage'
 import { CapturedPage } from '@/features/captured/pages/CapturedPage'
+import { ComparePage } from '@/features/compare/pages/ComparePage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 
 const PokemonDetailsPage = lazy(() =>
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: 'captured',
         element: <CapturedPage />,
+      },
+      {
+        path: 'compare',
+        element: <ComparePage />,
       },
       {
         path: 'battle',
