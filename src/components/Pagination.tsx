@@ -19,21 +19,22 @@ export function Pagination({
 
   return (
     <nav
-      className="flex items-center justify-center gap-3"
+      className="flex flex-wrap items-center justify-center gap-2 sm:gap-3"
       aria-label="Pagination"
     >
       <Button
         variant="outline"
         size="sm"
+        className="min-w-[2.75rem] sm:min-w-0"
         onClick={() => onPageChange(page - 1)}
         disabled={!canGoPrevious || isFetching}
         aria-label="Previous page"
       >
         <ChevronLeft className="h-4 w-4" />
-        Previous
+        <span className="hidden sm:inline">Previous</span>
       </Button>
 
-      <p className="min-w-[8rem] text-center text-sm text-muted-foreground">
+      <p className="w-full text-center text-sm text-muted-foreground sm:w-auto sm:min-w-[8rem]">
         Page{' '}
         <span className="font-medium text-foreground">{page}</span> of{' '}
         <span className="font-medium text-foreground">{totalPages}</span>
@@ -42,11 +43,12 @@ export function Pagination({
       <Button
         variant="outline"
         size="sm"
+        className="min-w-[2.75rem] sm:min-w-0"
         onClick={() => onPageChange(page + 1)}
         disabled={!canGoNext || isFetching}
         aria-label="Next page"
       >
-        Next
+        <span className="hidden sm:inline">Next</span>
         <ChevronRight className="h-4 w-4" />
       </Button>
     </nav>

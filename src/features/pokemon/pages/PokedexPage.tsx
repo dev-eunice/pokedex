@@ -103,9 +103,9 @@ export function PokedexPage() {
   }, [page, totalPages])
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 sm:space-y-8">
       <section className="space-y-2">
-        <h1 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+        <h1 className="font-display text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
           Pokédex
         </h1>
         <p className="max-w-2xl text-muted-foreground">
@@ -114,11 +114,11 @@ export function PokedexPage() {
         </p>
       </section>
 
-      <section className="flex flex-col gap-4 rounded-2xl border border-border bg-card/70 p-4 shadow-sm backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex-1">
+      <section className="flex flex-col gap-3 rounded-2xl border border-border bg-card/70 p-3 shadow-sm backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-4">
+        <div className="min-w-0 flex-1">
           <SearchBar value={searchInput} onChange={handleSearchChange} />
         </div>
-        <ViewToggle value={viewMode} onChange={handleViewChange} />
+        <ViewToggle value={viewMode} onChange={handleViewChange} className="self-end sm:self-auto" />
       </section>
 
       {error ? (

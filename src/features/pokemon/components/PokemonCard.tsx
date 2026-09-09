@@ -22,7 +22,7 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
     <Link
       to={`/pokemon/${pokemon.id}`}
       className={cn(
-        'group block aspect-[5/7] w-full max-w-[240px] justify-self-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+        'group block aspect-[5/7] w-full max-w-[280px] justify-self-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:max-w-[240px]',
         isCaptured && 'drop-shadow-[0_0_12px_rgba(255,215,0,0.45)]',
       )}
       aria-label={`${formatPokemonName(pokemon.name)}, ${cardMeta.hp} HP`}
@@ -97,10 +97,10 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
           <span className="text-sm font-black">{cardMeta.attackDamage}</span>
         </div>
 
-        {/* Footer */}
+        {/* Footer — simplified on small screens */}
         <footer className="mt-auto space-y-1">
           <div
-            className="flex items-center justify-between rounded px-1.5 py-0.5 text-[7px] font-bold uppercase tracking-wide"
+            className="hidden items-center justify-between rounded px-1.5 py-0.5 text-[7px] font-bold uppercase tracking-wide sm:flex"
             style={{ backgroundColor: theme.header }}
           >
             <span>Weakness</span>
@@ -108,7 +108,7 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
             <span>Retreat</span>
           </div>
           <p
-            className="line-clamp-2 rounded px-1 py-0.5 text-[7px] leading-tight italic"
+            className="hidden line-clamp-2 rounded px-1 py-0.5 text-[7px] leading-tight italic sm:block"
             style={{ backgroundColor: 'rgba(255,255,255,0.25)' }}
           >
             A classic Kanto species awaiting discovery in your Pokédex collection.

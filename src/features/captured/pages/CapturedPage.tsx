@@ -10,9 +10,9 @@ export function CapturedPage() {
   const captured = useCapturedPokemonList()
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 sm:space-y-8">
       <section className="space-y-2">
-        <h1 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+        <h1 className="font-display text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
           Captured
         </h1>
         <p className="text-muted-foreground">
@@ -35,7 +35,7 @@ export function CapturedPage() {
           }
         />
       ) : (
-        <div className="grid gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {captured.map((entry) => (
             <CapturedPokemonCard key={entry.pokemonId} entry={entry} />
           ))}

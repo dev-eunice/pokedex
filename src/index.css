@@ -60,7 +60,7 @@
   }
 
   body {
-    @apply min-h-screen bg-background font-sans text-foreground antialiased;
+    @apply min-h-screen overflow-x-hidden bg-background font-sans text-foreground antialiased;
     background-image:
       radial-gradient(circle at 20% 0%, oklch(0.55 0.18 25 / 0.08), transparent 40%),
       radial-gradient(circle at 80% 10%, oklch(0.62 0.15 250 / 0.08), transparent 35%);
@@ -81,4 +81,12 @@
   .text-balance {
     text-wrap: balance;
   }
+}
+
+model-viewer {
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  --progress-bar-color: #ef5350;
+  --progress-bar-height: 3px;
 }
