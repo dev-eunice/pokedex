@@ -1,0 +1,606 @@
+{
+  "1": {
+    "type": "grass",
+    "hp": 45
+  },
+  "2": {
+    "type": "grass",
+    "hp": 60
+  },
+  "3": {
+    "type": "grass",
+    "hp": 80
+  },
+  "4": {
+    "type": "fire",
+    "hp": 39
+  },
+  "5": {
+    "type": "fire",
+    "hp": 58
+  },
+  "6": {
+    "type": "fire",
+    "hp": 78
+  },
+  "7": {
+    "type": "water",
+    "hp": 44
+  },
+  "8": {
+    "type": "water",
+    "hp": 59
+  },
+  "9": {
+    "type": "water",
+    "hp": 79
+  },
+  "10": {
+    "type": "bug",
+    "hp": 45
+  },
+  "11": {
+    "type": "bug",
+    "hp": 50
+  },
+  "12": {
+    "type": "bug",
+    "hp": 60
+  },
+  "13": {
+    "type": "bug",
+    "hp": 40
+  },
+  "14": {
+    "type": "bug",
+    "hp": 45
+  },
+  "15": {
+    "type": "bug",
+    "hp": 65
+  },
+  "16": {
+    "type": "normal",
+    "hp": 40
+  },
+  "17": {
+    "type": "normal",
+    "hp": 63
+  },
+  "18": {
+    "type": "normal",
+    "hp": 83
+  },
+  "19": {
+    "type": "normal",
+    "hp": 30
+  },
+  "20": {
+    "type": "normal",
+    "hp": 55
+  },
+  "21": {
+    "type": "normal",
+    "hp": 40
+  },
+  "22": {
+    "type": "normal",
+    "hp": 65
+  },
+  "23": {
+    "type": "poison",
+    "hp": 35
+  },
+  "24": {
+    "type": "poison",
+    "hp": 60
+  },
+  "25": {
+    "type": "electric",
+    "hp": 35
+  },
+  "26": {
+    "type": "electric",
+    "hp": 60
+  },
+  "27": {
+    "type": "ground",
+    "hp": 50
+  },
+  "28": {
+    "type": "ground",
+    "hp": 75
+  },
+  "29": {
+    "type": "poison",
+    "hp": 55
+  },
+  "30": {
+    "type": "poison",
+    "hp": 70
+  },
+  "31": {
+    "type": "poison",
+    "hp": 90
+  },
+  "32": {
+    "type": "poison",
+    "hp": 46
+  },
+  "33": {
+    "type": "poison",
+    "hp": 61
+  },
+  "34": {
+    "type": "poison",
+    "hp": 81
+  },
+  "35": {
+    "type": "fairy",
+    "hp": 70
+  },
+  "36": {
+    "type": "fairy",
+    "hp": 95
+  },
+  "37": {
+    "type": "fire",
+    "hp": 38
+  },
+  "38": {
+    "type": "fire",
+    "hp": 73
+  },
+  "39": {
+    "type": "normal",
+    "hp": 115
+  },
+  "40": {
+    "type": "normal",
+    "hp": 140
+  },
+  "41": {
+    "type": "poison",
+    "hp": 40
+  },
+  "42": {
+    "type": "poison",
+    "hp": 75
+  },
+  "43": {
+    "type": "grass",
+    "hp": 45
+  },
+  "44": {
+    "type": "grass",
+    "hp": 60
+  },
+  "45": {
+    "type": "grass",
+    "hp": 75
+  },
+  "46": {
+    "type": "bug",
+    "hp": 35
+  },
+  "47": {
+    "type": "bug",
+    "hp": 60
+  },
+  "48": {
+    "type": "bug",
+    "hp": 60
+  },
+  "49": {
+    "type": "bug",
+    "hp": 70
+  },
+  "50": {
+    "type": "ground",
+    "hp": 10
+  },
+  "51": {
+    "type": "ground",
+    "hp": 35
+  },
+  "52": {
+    "type": "normal",
+    "hp": 40
+  },
+  "53": {
+    "type": "normal",
+    "hp": 65
+  },
+  "54": {
+    "type": "water",
+    "hp": 50
+  },
+  "55": {
+    "type": "water",
+    "hp": 80
+  },
+  "56": {
+    "type": "fighting",
+    "hp": 40
+  },
+  "57": {
+    "type": "fighting",
+    "hp": 65
+  },
+  "58": {
+    "type": "fire",
+    "hp": 55
+  },
+  "59": {
+    "type": "fire",
+    "hp": 90
+  },
+  "60": {
+    "type": "water",
+    "hp": 40
+  },
+  "61": {
+    "type": "water",
+    "hp": 65
+  },
+  "62": {
+    "type": "water",
+    "hp": 90
+  },
+  "63": {
+    "type": "psychic",
+    "hp": 25
+  },
+  "64": {
+    "type": "psychic",
+    "hp": 40
+  },
+  "65": {
+    "type": "psychic",
+    "hp": 55
+  },
+  "66": {
+    "type": "fighting",
+    "hp": 70
+  },
+  "67": {
+    "type": "fighting",
+    "hp": 80
+  },
+  "68": {
+    "type": "fighting",
+    "hp": 90
+  },
+  "69": {
+    "type": "grass",
+    "hp": 50
+  },
+  "70": {
+    "type": "grass",
+    "hp": 65
+  },
+  "71": {
+    "type": "grass",
+    "hp": 80
+  },
+  "72": {
+    "type": "water",
+    "hp": 40
+  },
+  "73": {
+    "type": "water",
+    "hp": 80
+  },
+  "74": {
+    "type": "rock",
+    "hp": 40
+  },
+  "75": {
+    "type": "rock",
+    "hp": 55
+  },
+  "76": {
+    "type": "rock",
+    "hp": 80
+  },
+  "77": {
+    "type": "fire",
+    "hp": 50
+  },
+  "78": {
+    "type": "fire",
+    "hp": 65
+  },
+  "79": {
+    "type": "water",
+    "hp": 90
+  },
+  "80": {
+    "type": "water",
+    "hp": 95
+  },
+  "81": {
+    "type": "electric",
+    "hp": 25
+  },
+  "82": {
+    "type": "electric",
+    "hp": 50
+  },
+  "83": {
+    "type": "normal",
+    "hp": 52
+  },
+  "84": {
+    "type": "normal",
+    "hp": 35
+  },
+  "85": {
+    "type": "normal",
+    "hp": 60
+  },
+  "86": {
+    "type": "water",
+    "hp": 65
+  },
+  "87": {
+    "type": "water",
+    "hp": 90
+  },
+  "88": {
+    "type": "poison",
+    "hp": 80
+  },
+  "89": {
+    "type": "poison",
+    "hp": 105
+  },
+  "90": {
+    "type": "water",
+    "hp": 30
+  },
+  "91": {
+    "type": "water",
+    "hp": 50
+  },
+  "92": {
+    "type": "ghost",
+    "hp": 30
+  },
+  "93": {
+    "type": "ghost",
+    "hp": 45
+  },
+  "94": {
+    "type": "ghost",
+    "hp": 60
+  },
+  "95": {
+    "type": "rock",
+    "hp": 35
+  },
+  "96": {
+    "type": "psychic",
+    "hp": 60
+  },
+  "97": {
+    "type": "psychic",
+    "hp": 85
+  },
+  "98": {
+    "type": "water",
+    "hp": 30
+  },
+  "99": {
+    "type": "water",
+    "hp": 55
+  },
+  "100": {
+    "type": "electric",
+    "hp": 40
+  },
+  "101": {
+    "type": "electric",
+    "hp": 60
+  },
+  "102": {
+    "type": "grass",
+    "hp": 60
+  },
+  "103": {
+    "type": "grass",
+    "hp": 95
+  },
+  "104": {
+    "type": "ground",
+    "hp": 50
+  },
+  "105": {
+    "type": "ground",
+    "hp": 60
+  },
+  "106": {
+    "type": "fighting",
+    "hp": 50
+  },
+  "107": {
+    "type": "fighting",
+    "hp": 50
+  },
+  "108": {
+    "type": "normal",
+    "hp": 90
+  },
+  "109": {
+    "type": "poison",
+    "hp": 40
+  },
+  "110": {
+    "type": "poison",
+    "hp": 65
+  },
+  "111": {
+    "type": "ground",
+    "hp": 80
+  },
+  "112": {
+    "type": "ground",
+    "hp": 105
+  },
+  "113": {
+    "type": "normal",
+    "hp": 250
+  },
+  "114": {
+    "type": "grass",
+    "hp": 65
+  },
+  "115": {
+    "type": "normal",
+    "hp": 105
+  },
+  "116": {
+    "type": "water",
+    "hp": 30
+  },
+  "117": {
+    "type": "water",
+    "hp": 55
+  },
+  "118": {
+    "type": "water",
+    "hp": 45
+  },
+  "119": {
+    "type": "water",
+    "hp": 80
+  },
+  "120": {
+    "type": "water",
+    "hp": 30
+  },
+  "121": {
+    "type": "water",
+    "hp": 60
+  },
+  "122": {
+    "type": "psychic",
+    "hp": 40
+  },
+  "123": {
+    "type": "bug",
+    "hp": 70
+  },
+  "124": {
+    "type": "ice",
+    "hp": 65
+  },
+  "125": {
+    "type": "electric",
+    "hp": 65
+  },
+  "126": {
+    "type": "fire",
+    "hp": 65
+  },
+  "127": {
+    "type": "bug",
+    "hp": 65
+  },
+  "128": {
+    "type": "normal",
+    "hp": 75
+  },
+  "129": {
+    "type": "water",
+    "hp": 20
+  },
+  "130": {
+    "type": "water",
+    "hp": 95
+  },
+  "131": {
+    "type": "water",
+    "hp": 130
+  },
+  "132": {
+    "type": "normal",
+    "hp": 48
+  },
+  "133": {
+    "type": "normal",
+    "hp": 55
+  },
+  "134": {
+    "type": "water",
+    "hp": 130
+  },
+  "135": {
+    "type": "electric",
+    "hp": 65
+  },
+  "136": {
+    "type": "fire",
+    "hp": 65
+  },
+  "137": {
+    "type": "normal",
+    "hp": 65
+  },
+  "138": {
+    "type": "rock",
+    "hp": 35
+  },
+  "139": {
+    "type": "rock",
+    "hp": 70
+  },
+  "140": {
+    "type": "rock",
+    "hp": 30
+  },
+  "141": {
+    "type": "rock",
+    "hp": 60
+  },
+  "142": {
+    "type": "rock",
+    "hp": 80
+  },
+  "143": {
+    "type": "normal",
+    "hp": 160
+  },
+  "144": {
+    "type": "ice",
+    "hp": 90
+  },
+  "145": {
+    "type": "electric",
+    "hp": 90
+  },
+  "146": {
+    "type": "fire",
+    "hp": 90
+  },
+  "147": {
+    "type": "dragon",
+    "hp": 41
+  },
+  "148": {
+    "type": "dragon",
+    "hp": 61
+  },
+  "149": {
+    "type": "dragon",
+    "hp": 91
+  },
+  "150": {
+    "type": "psychic",
+    "hp": 106
+  },
+  "151": {
+    "type": "psychic",
+    "hp": 100
+  }
+}
