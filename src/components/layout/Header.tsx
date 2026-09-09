@@ -1,4 +1,4 @@
-import { CheckCircle2, Menu, X } from 'lucide-react'
+import { CheckCircle2, Menu, Swords, X } from 'lucide-react'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { ThemeToggle } from '@/components/layout/ThemeToggle'
@@ -9,6 +9,7 @@ import { cn } from '@/lib/utils/cn'
 const navItems = [
   { to: '/', label: 'Pokédex', end: true },
   { to: '/captured', label: 'Captured', end: false },
+  { to: '/battle', label: 'Battle', end: false },
 ]
 
 export function Header() {
@@ -100,6 +101,9 @@ export function Header() {
                 }
               >
                 <span className="inline-flex items-center gap-2">
+                  {item.to === '/battle' ? (
+                    <Swords className="h-4 w-4" aria-hidden />
+                  ) : null}
                   {item.to === '/captured' ? (
                     <CheckCircle2 className="h-4 w-4" aria-hidden />
                   ) : null}
