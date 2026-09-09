@@ -1,4 +1,4 @@
-import { ArrowLeftRight, CheckCircle2, Menu, Swords, X } from 'lucide-react'
+import { ArrowLeftRight, CheckCircle2, Info, Menu, Swords, X } from 'lucide-react'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { ThemeToggle } from '@/components/layout/ThemeToggle'
@@ -11,6 +11,7 @@ const navItems = [
   { to: '/captured', label: 'Captured', end: false },
   { to: '/compare', label: 'Compare', end: false },
   { to: '/battle', label: 'Battle', end: false },
+  { to: '/about', label: 'About', end: false },
 ]
 
 export function Header() {
@@ -37,7 +38,10 @@ export function Header() {
           </div>
         </NavLink>
 
-        <nav className="hidden items-center gap-0.5 md:flex lg:gap-1" aria-label="Main navigation">
+        <nav
+          className="hidden max-w-[52%] items-center gap-0.5 overflow-x-auto md:flex lg:max-w-none lg:gap-1"
+          aria-label="Main navigation"
+        >
           {navItems.map((item) => (
             <NavLink
               key={item.to}
@@ -102,6 +106,9 @@ export function Header() {
                 }
               >
                 <span className="inline-flex items-center gap-2">
+                  {item.to === '/about' ? (
+                    <Info className="h-4 w-4" aria-hidden />
+                  ) : null}
                   {item.to === '/compare' ? (
                     <ArrowLeftRight className="h-4 w-4" aria-hidden />
                   ) : null}

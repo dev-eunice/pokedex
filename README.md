@@ -1,6 +1,6 @@
 # Gen 1 Pokédex
 
-A frontend assessment project for exploring, searching, and tracking captured Gen 1 Pokémon (#001–#151).
+A project for exploring, searching, and tracking captured Gen 1 Pokémon (#001–#151).
 
 ## Features
 
