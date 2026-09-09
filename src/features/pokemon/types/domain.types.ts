@@ -30,3 +30,24 @@ export interface PokemonListPage {
   pageSize: number
   totalPages: number
 }
+
+export interface EvolutionTriggerInfo {
+  label: string
+}
+
+export interface EvolutionStageInfo {
+  id: number
+  name: string
+  spriteUrl: string
+}
+
+export interface EvolutionPathInfo {
+  stages: EvolutionStageInfo[]
+  triggers: EvolutionTriggerInfo[]
+}
+
+export interface PokemonEvolutionData {
+  paths: EvolutionPathInfo[]
+  primaryPath: EvolutionPathInfo | null
+  hasEvolution: boolean
+}

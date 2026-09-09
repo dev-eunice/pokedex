@@ -14,6 +14,14 @@ export function extractPokemonIdFromUrl(url: string): number {
   return Number.parseInt(match[1], 10)
 }
 
+export function extractSpeciesIdFromUrl(url: string): number {
+  const match = url.match(/\/pokemon-species\/(\d+)\/?$/)
+  if (!match) {
+    throw new Error(`Unable to extract species ID from URL: ${url}`)
+  }
+  return Number.parseInt(match[1], 10)
+}
+
 export function getPokemonArtworkUrl(id: number): string {
   return `${OFFICIAL_ARTWORK_BASE}/${id}.png`
 }

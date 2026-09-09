@@ -12,6 +12,9 @@ import {
 import { PokemonStats } from '@/features/pokemon/components/PokemonStats'
 import { PokemonTypeIcon } from '@/features/pokemon/components/PokemonTypeIcon'
 import { PokemonMatchupsPanel } from '@/features/compare/components/PokemonMatchupsPanel'
+import { EvolutionChainPanel } from '@/features/pokemon/components/EvolutionChainPanel'
+import { useEvolutionChain } from '@/features/pokemon/hooks/useEvolutionChain'
+import { useEvolutionAnimation } from '@/features/pokemon/hooks/useEvolutionAnimation'
 import {
   buildCompareProfileFromDetails,
   buildCompareProfileFromSummary,
@@ -89,6 +92,7 @@ export function PokemonDetailsPage() {
   const isValidId = isValidGen1Id(id)
 
   const { data, isLoading, error, refetch } = usePokemon(id)
+  const evolutionQuery = useEvolutionChain(id)
   const allGen1Query = useAllGen1Pokemon()
   const isCaptured = useIsCaptured(id)
   const capturedMap = useCapturedPokemonMap()
@@ -100,6 +104,11 @@ export function PokemonDetailsPage() {
   const [uncaptureOpen, setUncaptureOpen] = useState(false)
   const [artViewMode, setArtViewMode] = useState<ArtViewMode>('2d')
   const [autoRotate, setAutoRotate] = useState(false)
+
+  const evolutionAnimation = useEvolutionAnimation({
+    path: evolutionQuery.data?.primaryPath ?? null,
+    currentId: id,
+  })
 
   const matchupLists = useMemo(() => {
     if (!data) {
@@ -221,6 +230,18 @@ export function PokemonDetailsPage() {
               autoRotate={autoRotate}
               onAutoRotateChange={setAutoRotate}
               frameColor={theme.frame}
+              accentColor={theme.accent}
+              evolution={{
+                canEvolve: evolutionAnimation.canEvolve,
+                isPlaying: evolutionAnimation.isPlaying,
+                phase: evolutionAnimation.phase,
+                triggerLabel: evolutionAnimation.triggerLabel,
+                currentStage: evolutionAnimation.currentStage,
+                displayIndex: evolutionAnimation.displayIndex,
+                stageCount: evolutionAnimation.stageCount,
+                onPlay: evolutionAnimation.play,
+                onStop: evolutionAnimation.stop,
+              }}
             />
 
             <p
@@ -393,6 +414,16 @@ export function PokemonDetailsPage() {
               </div>
             </div>
           </TcgPanel>
+
+          <EvolutionChainPanel
+            pokemonId={data.id}
+            theme={theme}
+            activeStageId={
+              evolutionAnimation.isPlaying
+                ? evolutionAnimation.currentStage?.id
+                : undefined
+            }
+          />
 
           <PokemonMatchupsPanel
             pokemonId={data.id}
