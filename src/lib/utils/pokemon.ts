@@ -27,6 +27,12 @@ export function getPokemonSpriteUrl(id: number): string {
   return getPokemonArtworkUrl(id)
 }
 
+export function prefetchPokemonImage(id: number, src?: string): void {
+  const url = src ?? getPokemonArtworkUrl(id)
+  const image = new Image()
+  image.src = url
+}
+
 export function getPokemon3DModelUrl(id: number): string {
   return `${POKEMON_3D_MODEL_BASE}/${id}.glb`
 }

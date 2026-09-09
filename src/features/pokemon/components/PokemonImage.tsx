@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
   getPokemonArtworkUrl,
   getPokemonPixelSpriteUrl,
@@ -30,12 +30,17 @@ export function PokemonImage({
   const pixelSpriteUrl = getPokemonPixelSpriteUrl(pokemonId)
   const [imageSrc, setImageSrc] = useState(artworkUrl)
 
+  useEffect(() => {
+    setImageSrc(artworkUrl)
+  }, [artworkUrl, pokemonId])
+
   function handleError() {
     setImageSrc((current) => (current === pixelSpriteUrl ? current : pixelSpriteUrl))
   }
 
   return (
     <img
+      key={`${pokemonId}-${imageSrc}`}
       src={imageSrc}
       alt={alt}
       width={width}
