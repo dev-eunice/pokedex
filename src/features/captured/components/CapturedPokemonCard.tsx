@@ -45,6 +45,20 @@ export function CapturedPokemonCard({ entry }: CapturedPokemonCardProps) {
   return (
     <>
       <div className="group relative aspect-[5/7] w-full max-w-[280px] justify-self-center drop-shadow-[0_0_12px_rgba(255,215,0,0.45)] sm:max-w-[240px]">
+        <div className="absolute right-2 top-2 z-20 flex items-center gap-1">
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon"
+            className="h-6 w-6 rounded-full border border-black/10 bg-white/95 text-destructive shadow-sm hover:bg-white hover:text-destructive sm:h-7 sm:w-7"
+            onClick={() => setConfirmOpen(true)}
+            aria-label={`Remove ${formatPokemonName(entry.name)} from captured list`}
+          >
+            <Trash2 className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+          </Button>
+          <CapturedIndicator size="sm" />
+        </div>
+
         <Link
           to={`/pokemon/${entry.pokemonId}`}
           className="block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
@@ -58,11 +72,9 @@ export function CapturedPokemonCard({ entry }: CapturedPokemonCardProps) {
               color: theme.text,
             }}
           >
-            <CapturedIndicator className="absolute right-2 top-2 z-10" size="sm" />
-
             {/* Header */}
             <header
-              className="mb-1 flex items-center justify-between gap-1 rounded-md px-1.5 py-1"
+              className="mb-1 flex items-center justify-between gap-1 rounded-md px-1.5 py-1 pr-16"
               style={{ backgroundColor: theme.header }}
             >
               <div className="flex min-w-0 items-center gap-1.5">
@@ -144,17 +156,6 @@ export function CapturedPokemonCard({ entry }: CapturedPokemonCardProps) {
             </footer>
           </article>
         </Link>
-
-        <Button
-          type="button"
-          variant="ghost"
-          size="icon"
-          className="absolute left-2 top-2 z-20 h-7 w-7 rounded-full border border-black/10 bg-white/90 text-destructive shadow-sm hover:bg-white hover:text-destructive"
-          onClick={() => setConfirmOpen(true)}
-          aria-label={`Remove ${formatPokemonName(entry.name)} from captured list`}
-        >
-          <Trash2 className="h-3.5 w-3.5" />
-        </Button>
       </div>
 
       <ConfirmDialog
