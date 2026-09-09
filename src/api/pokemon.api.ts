@@ -1,9 +1,16 @@
 import { apiClient } from '@/api/apiClient'
 import type {
+  EvolutionChainResponseApi,
   PokemonDetailResponseApi,
   PokemonListResponseApi,
+  PokemonSpeciesResponseApi,
 } from '@/features/pokemon/types/api.types'
-import type { PokemonDetails, PokemonSummary } from '@/features/pokemon/types/domain.types'
+import type {
+  PokemonDetails,
+  PokemonEvolutionData,
+  PokemonSummary,
+} from '@/features/pokemon/types/domain.types'
+import { getPokemonEvolutionData } from '@/features/pokemon/utils/evolutionTransform'
 import {
   transformPokemonDetailResponse,
   transformPokemonListResponse,
@@ -46,4 +53,13 @@ export async function fetchPokemonById(id: number): Promise<PokemonDetails> {
     `${POKEAPI_BASE}/pokemon/${id}/`,
   )
   return transformPokemonDetailResponse(response)
+}
+
+export async function fetchPokemonEvolution(id: number): Promise<PokemonEvolutionData> {
+  const species = await apiClient<PokemonSpeciesResponseApi>(
+    `${POKEAPI_BASE}/pokemon-species/${id}/`,
+  )
+
+  const chain = await apiClient<EvolutionChainResponseApi>(species.evolution_chain.url)
+  return getPokemonEvolutionData(chain.chain, id)
 }

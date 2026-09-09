@@ -6,4 +6,6 @@ export const pokemonQueryKeys = {
   gen1All: () => [...pokemonQueryKeys.all, 'gen1-all'] as const,
   details: () => [...pokemonQueryKeys.all, 'detail'] as const,
   detail: (id: number) => [...pokemonQueryKeys.details(), id] as const,
+  evolutions: () => [...pokemonQueryKeys.all, 'evolution'] as const,
+  evolution: (id: number) => [...pokemonQueryKeys.evolutions(), id] as const,
 }

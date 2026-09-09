@@ -45,3 +45,33 @@ export interface PokemonDetailResponseApi {
   abilities: PokemonAbilitySlotApi[]
   stats: PokemonStatSlotApi[]
 }
+
+export interface PokemonSpeciesResponseApi {
+  evolution_chain: {
+    url: string
+  }
+}
+
+export interface EvolutionDetailApi {
+  trigger: {
+    name: string
+  }
+  min_level: number | null
+  item: {
+    name: string
+  } | null
+}
+
+export interface EvolutionChainLinkApi {
+  species: {
+    name: string
+    url: string
+  }
+  evolution_details: EvolutionDetailApi[]
+  evolves_to: EvolutionChainLinkApi[]
+}
+
+export interface EvolutionChainResponseApi {
+  id: number
+  chain: EvolutionChainLinkApi
+}
